@@ -1,0 +1,55 @@
+[
+  {
+    "id": "1",
+    "name": "Practice",
+    "visible": "true",
+    "position": "1",
+    "type": "dropdown",
+    "isVisible": "true",
+    "options": "this.practice"
+  },
+  {
+  "id": "2",
+  "name": "Location",
+  "visible": "true",
+  "position": "1",
+  "type": "dropdown",
+  "isVisible": "true",
+  "options": "this.location"
+  },
+  {
+  "id": "3",
+  "name": "POS Practice",
+  "visible": "true",
+  "position": "1",
+  "type": "dropdown",
+  "isVisible": "true",
+  "options": "this.pos_practice"
+  },
+  {
+  "id": "2",
+  "name": "POS Location",
+  "visible": "true",
+  "position": "1",
+  "type": "dropdown",
+  "isVisible": "true",
+  "options": "this.pos_location"
+  },
+  {
+  "id": "2",
+  "name": "Provider",
+  "visible": "true",
+  "position": "1",
+  "type": "dropdown",
+  "isVisible": "true",
+  "options": "this.provider"
+  },
+  {
+  "id": "2",
+  "name": "Patient Name",
+  "visible": "true",
+  "position": "1",
+  "type": "inputbox",
+  "isVisible": "true"
+  }
+]

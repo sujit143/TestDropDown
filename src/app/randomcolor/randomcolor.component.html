@@ -1,0 +1,28 @@
+
+
+	<div class="card-modal"
+  [ngStyle]="{'background':gradient_background_color}">
+
+    <input type="color" [(ngModel)]="background_color">
+
+
+
+  {{ gradient_background_color }}
+
+		<button (click)="setColor()">
+      Set Random Gradient Background Color
+    </button>
+
+
+
+    <input type="number" [(ngModel)]="deg">
+    <input type="number" [(ngModel)]="fill_color_A">
+    <input type="number" [(ngModel)]="fill_color_B">
+
+	</div>
+
+
+<div class="card"
+  [ngStyle]="{'background':gradient_background_color}">
+  {{ background_color }}
+</div>

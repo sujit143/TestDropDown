@@ -1,0 +1,24 @@
+[
+  {
+    "location": "Location",
+    "provider": "Provider",
+    "patient_name": "Patient Name",
+    "case": "Case #",
+    "appointment_from_date": "Appointment From Date",
+    "authorization_status": "Authorization Status",
+    "mop": "MOP",
+    "super_bill_status": "Super Bill Status",
+    "checked_in_time": "Checked In Time",
+    "appointment_created_from_date": "Appointment Created From Date",
+    "verification_status": "Verification Status",
+    "case_details": "Case Details",
+    "appointment_status": "Appointment Status",
+    "dictation_type": "Dictation Type",
+    "assessment_status": "Assessment Status",
+    "pos_location": "POS Location",
+    "video_session": "Video Session",
+    "dictation_status": "Dictation Status",
+    "billing_status": "Billing Status",
+    "appointment_type": "Appointment Type"
+  }
+]

@@ -1,0 +1,148 @@
+<!-- <div class="col-md-12">
+    <div class="main-container container-fluid">
+
+      <div class="data-container zoomIn">
+
+
+  <button type="button" (click)="showDialog('Add')" pButton icon="pi pi-info-circle" label="Add Department"></button><br>
+
+  <h3>Multiple</h3>
+  <span class="ui-fluid">
+      <p-autoComplete [(ngModel)]="arrDesig"   styleClass="wid100"
+          [minLength]="1" placeholder="Start Searching for a Designation by Name" field="name" >
+      </p-autoComplete>
+  </span>
+  <ul>
+      <li *ngFor="let c of getDesig">{{c.name}}</li>
+  </ul>
+
+
+
+ <p-table [value]="arrDesig" [paginator]="true" [rows]="15">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Actions</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-desg>
+      <tr>
+          <td>{{desg.name}}</td>
+          <td>{{desg.description}}</td>
+          <td>
+              <a class="btnedit" (click)="openEdit('Edit',desg.id,desg)">Edit</a> |
+              <a class="btndel" (click)="confirmDelete(desg.id)">Delete</a>
+          </td>
+      </tr>
+   </ng-template>
+</p-table>
+
+</div>
+</div>
+</div>
+
+<p-dialog header="Add/Edit Department" [(visible)]="display">
+   <div class="modal-body">
+      <form (ngSubmit)='onFormSubmit(f)' #f="ngForm">
+        <table>
+          <tr>
+            <td>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <div class="">
+                  <input id="name" class="form-control" [(ngModel)]="name" placeholder="Name" name="name" required>
+                </div>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-group">
+                <label for="description">Description</label>
+                <div class="">
+                  <input id="description" class="form-control" [(ngModel)]="description" placeholder="description"
+                    name="description" required>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+        <div>
+          <button type="submit" [disabled]='!f.valid' class="btn btn-outline-dark"
+            style='margin-left: 318px;'>{{selectedDesignationOption}}Department </button>
+        </div>
+      </form>
+    </div>
+</p-dialog>
+<p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog>
+
+ -->
+
+
+
+
+
+<div>
+  <button type="button" (click)="showDialog('Add')" pButton icon="pi pi-info-circle" label="Add Department"></button><br>
+ <p-table [value]="arrDesig" [paginator]="true" [rows]="15" [responsive]="true">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Actions</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-desg>
+      <tr>
+          <td>{{desg.name}}</td>
+          <td>{{desg.description}}</td>
+          <td>
+              <a class="btnedit" (click)="openEdit('Edit',desg.id,desg)">Edit</a> |
+              <a class="btndel" (click)="confirmDelete(desg.id)">Delete</a>
+          </td>
+      </tr>
+   </ng-template>
+</p-table>
+
+<p-dialog header="Add/Edit Designation" [(visible)]="display">
+   <div class="modal-body">
+      <form (ngSubmit)='onFormSubmit(f)' #f="ngForm">
+        <table>
+          <tr>
+            <td>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <div class="">
+                  <input id="name" class="form-control" [(ngModel)]="name" placeholder="Name" name="name" required>
+                </div>
+              </div>
+            </td>
+
+            <td>
+              <div class="form-group">
+                <label for="description">Description</label>
+                <div class="">
+                  <input id="description" class="form-control" [(ngModel)]="description" placeholder="description"
+                    name="description" required>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+        <div>
+          <button type="submit" [disabled]='!f.valid' class="btn btn-outline-dark"
+            style='margin-left: 318px;'>{{selectedDesignationOption}}Designation </button>
+        </div>
+      </form>
+    </div>
+</p-dialog>
+<p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog>
+
+</div>
+
+
+
+
+

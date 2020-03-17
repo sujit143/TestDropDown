@@ -1,0 +1,16 @@
+[
+  {
+    "Provider": "Dr Ky",
+    "PatientName": "abc",
+    "Case":"Y18047621_1",
+    "Location":"54 DEAN",
+    "AppointmentCreatedDate":"24/12/2015"
+  },
+  {
+    "Provider": "Ella John",
+    "PatientName": "xyz",
+    "Case":"Y18047755_1",
+    "Location":"Englewood",
+    "AppointmentCreatedDate":"01/05/2019"
+  }
+]

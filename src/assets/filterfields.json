@@ -1,0 +1,28 @@
+[
+  {
+    "practice": "Practice",
+    "location": "Location",
+    "provider": "Provider",
+    "pos_location": "POS Location",
+    "pos_practice": "POS Practice",
+    "case": "Case #",
+    "Account": "Account #",
+    "patient_name": "Patient Name",
+    "dictation_status": "Dictation Status",
+    "super_bill_status": "Super Bill Status",
+    "billing_status": "Billing Status",
+    "dictation_type": "Dictation Type",
+    "case_type": "Case Type",
+    "assessment_status": "Assessment Status",
+    "appointment_created_to_date": "Appointment Created To Date",
+    "appointment_status": "Appointment Status",
+    "episode_status": "Episode Status",
+    "authorization_status": "Authorization Status",
+    "appointment_created_from_date": "Appointment Created From Date",
+    "verification_status": "Verification Status",
+    "appointment_type": "Appointment Type",
+    "appointment_to_date": "Appointment To Date",
+    "appointment_from_date": "Appointment From Date",
+    "isstatfile": "IsStatFile"
+  }
+]

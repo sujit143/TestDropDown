@@ -1,0 +1,67 @@
+<div id="collapse1" class="tableDiv" >
+  <table  class="table table-striped table-hover table-condensed tablesorter  text-sm" >
+    <thead >
+      <tr >
+        <th *ngFor="let data of itemObjectsLeft" class="thproviderSort headerSort sortIconchange" title="Appointment From Date">
+          {{data.name}}
+        <!-- </th>
+        <th class="thproviderSort headerSort sortIconchange" title="Authorization Status">
+          Patient Name
+        </th>
+        <th class="thproviderSort headerSort sortIconchange" title="Case #">
+          Case
+        </th>
+        <th class="thproviderSort headerSort sortIconchange" title="Sort by MOP">
+          Location
+        </th>
+        <th class="thproviderSort headerSort sortIconchange" title="Super Bill Status">
+          Appointment Created Date
+        </th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <!-- *ngFor="let item of your" -->
+      <tr >
+        <td *ngFor="let data of itemObjectsLeft" class="lnkTratmentEpisode">
+          <span title="Authorization Pending">{{data.your}}</span>
+        </td>
+        <!-- <td class="lnkTratmentEpisode">
+          <span title="Authorization Pending">{{ item.PatientName }}</span>
+        </td>
+        <td class="lnkTratmentEpisode">
+          <span title="Authorization Pending">{{ item.Case }}</span>
+        </td>
+        <td class="lnkTratmentEpisode">
+          <span title="Authorization Pending">{{ item.Location }}</span>
+        </td>
+        <td class="lnkTratmentEpisode">
+          <span title="Authorization Pending">{{ item.AppointmentCreatedDate }}</span>
+        </td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-6 col-6 col-md-5 col-lg-3">
+    <bs-sortable
+      [(ngModel)]="itemObjectsLeft"
+      fieldName="name"
+      itemClass="sortable-item"
+      itemActiveClass="sortable-item-active"
+      placeholderItem="Drag here"
+      placeholderClass="placeholderStyle"
+      wrapperClass="sortable-wrapper"></bs-sortable>
+  </div>
+  <div class="col-xs-6 col-6 col-md-5 col-lg-3">
+    <bs-sortable
+      [(ngModel)]="itemObjectsRight"
+      fieldName="name"
+      itemClass="sortable-item"
+      itemActiveClass="sortable-item-active"
+      placeholderItem="Drag here"
+      placeholderClass="placeholderStyle"
+      wrapperClass="sortable-wrapper"></bs-sortable>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-height: 100vh;
+
+/*** Background Color ***/
+background: #e32c38;
+background: linear-gradient(-65deg, #e32c38 60%, #322f30 20%);
+background-attachment:fixed;
+background-repeat: no-repeat;
+/*** Background Color ***/
+
+}
+
+
+/***** Product Card *****/
+.card {
+  width: 250px;
+  height: 250px;
+  transition: 1s ease-in-out;
+  margin: auto;
+  padding: 5px;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  margin: 10px;
+
+  box-shadow: 10px 15px 5px 0px rgba(0,0,0,0.38);
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.6);
+
+
+  /*** Background Color ***/
+background: lightgray;
+/*background: linear-gradient(115deg, #e32c38 40%, #322f30 20%);
+
+background-attachment:fixed;
+background-repeat: no-repeat;*/
+/*** Background Color ***/
+}
+
+/* On mouse-over, add a deeper shadow */
+.card-modal:hover {
+  box-shadow: 0 12px 18px 0 rgba(0,0,0,0.7);
+  box-shadow: 10px 15px 28px 0px rgba(0,0,0,0.7);
+}
+/***** Product Card *****/

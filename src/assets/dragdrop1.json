@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Provider",
+    "visible": "true",
+    "position": "1",
+    "isVisible": "true",
+    "your": "this.Provider"
+  },
+  {
+  "id": "2",
+  "name": "Patient Name",
+  "visible": "true",
+  "position": "2",
+  "isVisible": "true",
+  "your": "this.PatientName"
+  },
+  {
+  "id": "3",
+  "name": "Case",
+  "visible": "true",
+  "position": "3",
+  "isVisible": "true",
+  "your": "this.Case"
+  },
+  {
+  "id": "4",
+  "name": "Location",
+  "visible": "true",
+  "position": "4",
+  "isVisible": "true",
+  "your": "this.Location"
+  },
+  {
+  "id": "5",
+  "name": "Appointment Created Date",
+  "visible": "true",
+  "position": "5",
+  "isVisible": "true",
+  "your": "this.AppointmentCreatedDate"
+  }
+]

@@ -1,0 +1,367 @@
+<div class="panel-heading" style="padding-left: 0px; padding-bottom: 0px; padding-right: 0px; padding-top: 0px;">
+  <div class="panel-options" style="background-color: white;">
+      <ul class="nav nav-tabs" style="background-color: #969696">
+          <li class="active"><a href="#ProviderDashboard" class="ProviderDashboard pdtab" data-toggle="tab" aria-expanded="false" style="color: white;"><i class="fa fa-file"></i>Provider Dashboard</a></li>
+
+</ul>
+</div>
+</div>
+
+
+
+<p-accordion>
+  <p-accordionTab header="Search Filters">
+
+
+<div class="row">
+  <div class="col-lg-12">
+      <div class="wrapper wrapper-content">
+          <div class="ibox-content m-b-sm border-bottom">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="row">
+
+                        <div class="col-md-2">
+                              <label>Practice</label>
+                              <!-- <p-multiSelect [options]="cars" [(ngModel)]="selectedCar2" styleClass="input-md formcontrol chosen-select" id="txtMemberName1" #pDropId filter="true"> -->
+
+                               <p-dropdown styleClass="input-md formcontrol chosen-select" id="txtMemberName1" [options]="cars" #pDropId [(ngModel)]="selectedCar2" filter="true">
+                                <ng-template let-item pTemplate="selectedItem">
+                                    <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                                </ng-template>
+                                <ng-template let-car pTemplate="item">
+                                    <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                        <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                                    </div>
+                                </ng-template>
+                              <!-- </p-multiSelect> -->
+                            </p-dropdown>
+                               </div>
+
+                               <div class="col-md-2">
+                              <label>Location</label>
+                              <p-dropdown styleClass="input-md formcontrol  chosen-select" [options]="cars" #pDropId [(ngModel)]="selectedCar2" filter="true">
+                                <ng-template let-item pTemplate="selectedItem">
+                                    <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                                </ng-template>
+                                <ng-template let-car pTemplate="item">
+                                    <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                        <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                                    </div>
+                                </ng-template>
+                            </p-dropdown>
+                               </div>
+
+                               <div class="col-md-2">
+                              <label>POS Practice</label>
+                              <p-dropdown styleClass="input-md formcontrol  chosen-select" #pDropId [options]="cars" [(ngModel)]="selectedCar2" filter="true">
+                                <ng-template let-item pTemplate="selectedItem">
+                                    <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                                </ng-template>
+                                <ng-template let-car pTemplate="item">
+                                    <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                        <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                                    </div>
+                                </ng-template>
+                            </p-dropdown>
+                              </div>
+
+                              <div class="col-md-2">
+                              <label>POS Location </label>
+                              <p-dropdown styleClass="input-md formcontrol  chosen-select" #pDropId [options]="cars" [(ngModel)]="selectedCar2" filter="true">
+                                <ng-template let-item pTemplate="selectedItem">
+                                    <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                                </ng-template>
+                                <ng-template let-car pTemplate="item">
+                                    <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                        <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                                    </div>
+                                </ng-template>
+                            </p-dropdown>
+                             </div>
+
+                             <div class="col-md-2">
+                              <label>Provider</label>
+                              <p-dropdown styleClass="input-md formcontrol  chosen-select" #pDropId [options]="cars" [(ngModel)]="selectedCar2" filter="true">
+                                <ng-template let-item pTemplate="selectedItem">
+                                    <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                                </ng-template>
+                                <ng-template let-car pTemplate="item">
+                                    <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                        <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                                    </div>
+                                </ng-template>
+                            </p-dropdown>
+                             </div>
+
+                             <div class="col-md-2">
+                              <label>Patient Name</label>
+                                  <div class="ui-inputgroup">
+                                  <input type="text" class="form-control textbox-search-onenterkey" id="txtPatientName" data-enterkey-pressed="#btnSearchShowDashboard" placeholder="First / Last Name">
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+
+                      <div class="col-md-2">
+                            <label>Account #</label>
+                            <div class="ui-inputgroup">
+                              <input type="text" class="form-control textbox-search-onenterkey" id="txtPatientName" data-enterkey-pressed="#btnSearchShowDashboard" placeholder="Account#">
+                              </div>
+                             </div>
+
+                             <div class="col-md-2">
+                            <label>Case #</label>
+                            <div class="ui-inputgroup">
+                              <input type="text" class="form-control textbox-search-onenterkey" id="txtPatientName" data-enterkey-pressed="#btnSearchShowDashboard" placeholder="Case#">
+                              </div>
+                             </div>
+
+                             <div class="col-md-2">
+                            <label>Appointment From Date</label>
+                            <div class="ui-inputgroup">
+                             <p-calendar></p-calendar>
+                              </div>
+                            </div>
+
+                            <div class="col-md-2">
+                              <label>Appointment To Date</label>
+                              <div class="ui-inputgroup">
+                               <p-calendar></p-calendar>
+                                </div>
+                              </div>
+
+                            <!-- <div class="col-md-2">
+                            <label>Appointment To Date</label>
+                            <div class="ui-inputgroup">
+                                <p-calendar></p-calendar>
+                               </div>
+                           </div> -->
+
+                           <div class="col-md-2">
+                            <label>Appointment Type </label>
+                            <p-dropdown styleClass="input-md formcontrol  chosen-select" #pDropId [options]="cars" [(ngModel)]="selectedCar2" filter="true">
+                              <ng-template let-item pTemplate="selectedItem">
+                                  <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                              </ng-template>
+                              <ng-template let-car pTemplate="item">
+                                  <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                      <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                                  </div>
+                              </ng-template>
+                          </p-dropdown>
+                           </div>
+
+                           <div class="col-md-2">
+                            <label>Appointment Status</label>
+                            <p-dropdown styleClass="input-md formcontrol  chosen-select" #pDropId [options]="cars" [(ngModel)]="selectedCar2" filter="true">
+                              <ng-template let-item pTemplate="selectedItem">
+                                  <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                              </ng-template>
+                              <ng-template let-car pTemplate="item">
+                                  <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                      <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                                  </div>
+                              </ng-template>
+                          </p-dropdown>
+                           </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-12">
+                  <div class="row">
+
+                    <div class="col-md-2">
+                          <label>Dictation Status</label>
+                          <p-dropdown styleClass="input-md formcontrol chosen-select" id="txtMemberName1" [options]="cars" #pDropId [(ngModel)]="selectedCar2" filter="true">
+                            <ng-template let-item pTemplate="selectedItem">
+                                <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                            </ng-template>
+                            <ng-template let-car pTemplate="item">
+                                <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                    <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                                </div>
+                            </ng-template>
+                        </p-dropdown>
+                           </div>
+
+                           <div class="col-md-2">
+                          <label>Assessment Status</label>
+                          <p-dropdown styleClass="input-md formcontrol  chosen-select" [options]="cars" #pDropId [(ngModel)]="selectedCar2" filter="true">
+                            <ng-template let-item pTemplate="selectedItem">
+                                <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                            </ng-template>
+                            <ng-template let-car pTemplate="item">
+                                <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                    <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                                </div>
+                            </ng-template>
+                        </p-dropdown>
+                           </div>
+
+                           <div class="col-md-2">
+                          <label>Billing Status</label>
+                          <p-dropdown styleClass="input-md formcontrol  chosen-select" #pDropId [options]="cars" [(ngModel)]="selectedCar2" filter="true">
+                            <ng-template let-item pTemplate="selectedItem">
+                                <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                            </ng-template>
+                            <ng-template let-car pTemplate="item">
+                                <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                    <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                                </div>
+                            </ng-template>
+                        </p-dropdown>
+                          </div>
+
+                          <div class="col-md-2">
+                          <label>Case Type</label>
+                          <p-dropdown styleClass="input-md formcontrol  chosen-select" #pDropId [options]="cars" [(ngModel)]="selectedCar2" filter="true">
+                            <ng-template let-item pTemplate="selectedItem">
+                                <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                            </ng-template>
+                            <ng-template let-car pTemplate="item">
+                                <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                    <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                                </div>
+                            </ng-template>
+                        </p-dropdown>
+                         </div>
+
+                         <div class="col-md-2">
+                          <label>Dictation Type</label>
+                          <p-dropdown styleClass="input-md formcontrol  chosen-select" #pDropId [options]="cars" [(ngModel)]="selectedCar2" filter="true">
+                            <ng-template let-item pTemplate="selectedItem">
+                                <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                            </ng-template>
+                            <ng-template let-car pTemplate="item">
+                                <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                    <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                                </div>
+                            </ng-template>
+                        </p-dropdown>
+                         </div>
+
+                         <div class="col-md-2">
+                          <label>Episode Status</label>
+                          <p-dropdown styleClass="input-md formcontrol  chosen-select" #pDropId [options]="cars" [(ngModel)]="selectedCar2" filter="true">
+                            <ng-template let-item pTemplate="selectedItem">
+                                <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                            </ng-template>
+                            <ng-template let-car pTemplate="item">
+                                <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                    <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                                </div>
+                            </ng-template>
+                        </p-dropdown>
+                         </div>
+
+                  </div>
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+
+                  <div class="col-md-2">
+                        <label>Favourite Filters</label>
+                        <p-dropdown styleClass="input-md formcontrol chosen-select" id="txtMemberName1" [options]="cars" #pDropId [(ngModel)]="selectedCar2" filter="true">
+                          <ng-template let-item pTemplate="selectedItem">
+                              <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                          </ng-template>
+                          <ng-template let-car pTemplate="item">
+                              <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                  <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                              </div>
+                          </ng-template>
+                      </p-dropdown>
+                         </div>
+
+                         <div class="col-md-2">
+                        <label>Authorization Status</label>
+                        <p-dropdown styleClass="input-md formcontrol  chosen-select" [options]="cars" #pDropId [(ngModel)]="selectedCar2" filter="true">
+                          <ng-template let-item pTemplate="selectedItem">
+                              <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                          </ng-template>
+                          <ng-template let-car pTemplate="item">
+                              <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                  <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                              </div>
+                          </ng-template>
+                      </p-dropdown>
+                         </div>
+
+                         <div class="col-md-2">
+                        <label>Verification Status</label>
+                        <p-dropdown styleClass="input-md formcontrol  chosen-select" #pDropId [options]="cars" [(ngModel)]="selectedCar2" filter="true">
+                          <ng-template let-item pTemplate="selectedItem">
+                              <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                          </ng-template>
+                          <ng-template let-car pTemplate="item">
+                              <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                  <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                              </div>
+                          </ng-template>
+                      </p-dropdown>
+                        </div>
+
+                       <div class="col-md-2">
+                        <label>App Created From Date</label>
+                        <div class="ui-inputgroup">
+                         <p-calendar></p-calendar>
+                          </div>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label>App Created To Date</label>
+                          <div class="ui-inputgroup">
+                           <p-calendar></p-calendar>
+                            </div>
+                          </div>
+
+                       <div class="col-md-2">
+                        <label>Super Bill Status</label>
+                        <p-dropdown styleClass="input-md formcontrol  chosen-select" #pDropId [options]="cars" [(ngModel)]="selectedCar2" filter="true">
+                          <ng-template let-item pTemplate="selectedItem">
+                              <span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+                          </ng-template>
+                          <ng-template let-car pTemplate="item">
+                              <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                                  <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                              </div>
+                          </ng-template>
+                      </p-dropdown>
+                       </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div style="margin-top: 14px !important;" class="filtersection col-xs-2">
+              <span>
+                  <label> Is Stat File</label>
+                  <br>
+                  <input type="checkbox" value="true" id="chkIsStatFilePD" class="" style="zoom:1.5;">
+              </span>
+          </div>
+          </div>
+
+              <br>
+              <!-- <app-yourdrs3></app-yourdrs3> -->
+
+          </div>
+      </div>
+  </div>
+</div>
+</p-accordionTab>
+
+<!-- <app-yourdrs2></app-yourdrs2> -->
+

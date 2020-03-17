@@ -1,0 +1,342 @@
+<!-- table Start -->
+
+<table class="table table-striped table-hover table-condensed tablesorter  text-sm" style="margin-bottom: 350px!important">
+  <thead style="background-color: #337ab7; color: white">
+      <tr>
+                      <th id="7" style="cursor: pointer;padding-right: 20px;" class="thproviderSort headerSort sortIconchange" data-columnname="AppFromDt_" data-sort="asc" title="Sort by Appointment From Date">
+Appointment From Date                                        </th>
+                      <th id="17" style="">
+
+
+                          Authorization Status
+
+                      </th>
+                      <th id="6" style="cursor: pointer;padding-right: 20px;" class="thproviderSort headerSort sortIconchange" data-columnname="CaseNo_" data-sort="asc" title="Sort by Case #">
+Case #                                        </th>
+                      <th id="24" style="cursor: pointer;padding-right: 20px;" class="thproviderSort headerSort sortIconchange" data-columnname="MOP_" data-sort="asc" title="Sort by MOP">
+MOP                                        </th>
+                      <th id="23" style="">
+
+
+                          Super Bill Status
+
+                      </th>
+                      <th id="22" style="">
+
+
+                          Checked In Time
+
+                      </th>
+                      <th id="4" style="cursor: pointer;padding-right: 20px;" class="thproviderSort headerSort sortIconchange" data-columnname="PatientName_" data-sort="asc" title="Sort by Patient Name">
+Patient Name                                        </th>
+                      <th id="19" style="cursor: pointer;padding-right: 20px;" class="thproviderSort headerSort sortIconchange" data-columnname="AppointmentCreatedDate_" data-sort="asc" title="Sort by Appointment Created From Date">
+                              <span>Appointment Created Date</span>
+                      </th>
+                      <th id="3" style="cursor: pointer;padding-right: 20px;" class="thproviderSort headerSort sortIconchange" data-columnname="Provider_" data-sort="asc" title="Sort by Provider">
+Provider                                        </th>
+                      <th id="18" style="">
+
+
+                          Verification Status
+
+                      </th>
+                      <th id="2" style="cursor: pointer;padding-right: 20px;" class="thproviderSort headerSort sortIconchange" data-columnname="Location_" data-sort="asc" title="Sort by Location">
+Location                                        </th>
+                      <th id="14" style="cursor: pointer;padding-right: 20px;" class="thproviderSort headerSort sortIconchange" data-columnname="CaseDetails_" data-sort="asc" title="Sort by Case Details">
+Case Details                                        </th>
+                      <th id="10" style="cursor: pointer;padding-right: 20px;" class="thproviderSort headerSort sortIconchange" data-columnname="AppStatus_" data-sort="asc" title="Sort by Appointment Status">
+Appointment Status                                        </th>
+                      <th id="25" style="">
+
+
+                          Dictation Type
+
+                      </th>
+                      <th id="12" style="">
+
+
+                          Assessment Status
+
+                      </th>
+                      <th id="28" style="">
+
+
+                          POS Location
+
+                      </th>
+                      <th id="21" style="">
+
+
+                          Video Session
+
+                      </th>
+                      <th id="11" style="">
+
+
+                          Dictation Status
+
+                      </th>
+                      <th id="13" style="cursor: pointer;padding-right: 20px;" class="thproviderSort headerSort sortIconchange" data-columnname="BillingStatus_" data-sort="asc" title="Sort by Billing Status">
+Billing Status                                        </th>
+                      <th id="9" style="cursor: pointer;padding-right: 20px;" class="thproviderSort headerSort sortIconchange" data-columnname="AppType_" data-sort="asc" title="Sort by Appointment Type">
+Appointment Type                                        </th>
+              <th>Actions</th>
+
+      </tr>
+  </thead>
+  <tbody>
+          <tr *ngFor="let item of your" data-appid="34428" style="color: black !important; background-color: white !important;">
+
+
+                          <td style="vertical-align: middle; cursor:pointer;" class="lnkTratmentEpisode" data-req-url="/Patient/GetTreatmentDashboardEpisodeDetails" data-updatecontainer="#dvPopupTopNodeTreatment" data-episodeid="10239" data-patientid="7621">
+                              {{item.appt_date}}
+                          </td>
+                          <td style="vertical-align: middle; cursor:pointer;" class="lnkTratmentEpisode" data-req-url="/Patient/GetTreatmentDashboardEpisodeDetails" data-updatecontainer="#dvPopupTopNodeTreatment" data-episodeid="10239" data-patientid="7621">
+
+
+                              <span class="badge badge-warning" style="font-size: 14px;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;" title="Authorization Pending">{{item.auth_status}}</span>
+
+                          </td>
+                          <td style="vertical-align: middle; cursor:pointer;" class="lnkTratmentEpisode" data-req-url="/Patient/GetTreatmentDashboardEpisodeDetails" data-updatecontainer="#dvPopupTopNodeTreatment" data-episodeid="10239" data-patientid="7621">{{item.case}}</td>
+                          <td style="vertical-align: middle; cursor:pointer;"><span>{{item.mop}}</span></td>
+                          <td style="vertical-align: middle; cursor:pointer;" class="lnkTratmentEpisode" data-req-url="/Patient/GetTreatmentDashboardEpisodeDetails" data-updatecontainer="#dvPopupTopNodeTreatment" data-episodeid="10239" data-patientid="7621">
+
+                                  <span>{{item.sup_bilstatus}}</span>
+                          </td>
+                          <td style="vertical-align: middle; cursor:pointer;" class="lnkTratmentEpisode" data-req-url="/Patient/GetTreatmentDashboardEpisodeDetails" data-updatecontainer="#dvPopupTopNodeTreatment" data-episodeid="10239" data-patientid="7621">
+
+                                  <span class="tooltipcase" title="NA">{{item.check_in_time}}</span>
+                          </td>
+                          <td style="vertical-align: middle; cursor:pointer;" class="lnkTratmentEpisode" data-req-url="/Patient/GetTreatmentDashboardEpisodeDetails" data-updatecontainer="#dvPopupTopNodeTreatment" data-episodeid="10239" data-patientid="7621">
+
+
+                                  <span class="tooltipcase" title="Doe, John
+DOB: 08/02/1995
+Gender: Male" data-content="Doe, John
+DOB: 08/02/1995
+Gender: Male">{{item.pat_name}}</span>
+
+                          </td>
+                          <td style="vertical-align: middle; cursor:pointer;" class="lnkTratmentEpisode" data-req-url="/Patient/GetTreatmentDashboardEpisodeDetails" data-updatecontainer="#dvPopupTopNodeTreatment" data-episodeid="10239" data-patientid="7621">
+                             {{item.appt_cre_date}}
+                          </td>
+                          <td style="vertical-align: middle; cursor:pointer;" class="lnkTratmentEpisode" data-req-url="/Patient/GetTreatmentDashboardEpisodeDetails" data-updatecontainer="#dvPopupTopNodeTreatment" data-episodeid="10239" data-patientid="7621">
+                              <span class="tooltipcase" title="Kyriakides Christopher" data-content="Kyriakides Christopher">{{item.provider}}</span>
+
+                          </td>
+                          <td style="vertical-align: middle; cursor:pointer;" class="lnkTratmentEpisode" data-req-url="/Patient/GetTreatmentDashboardEpisodeDetails" data-updatecontainer="#dvPopupTopNodeTreatment" data-episodeid="10239" data-patientid="7621">
+
+
+                                  <span class="badge badge-warning" style="font-size: 14px;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;" title="Pending">{{item.ver_status}}</span>
+                          </td>
+                          <td style="vertical-align: middle; cursor:pointer;" class="lnkTratmentEpisode" data-req-url="/Patient/GetTreatmentDashboardEpisodeDetails" data-updatecontainer="#dvPopupTopNodeTreatment" data-episodeid="10239" data-patientid="7621">
+
+                                  <span class="tooltipcase" title="HEMA
+54 DEAN" data-content="HEMA
+54 DEAN">{{item.location}}</span>
+                          </td>
+                          <td style="vertical-align: middle; cursor:pointer;" class="lnkTratmentEpisode" data-req-url="/Patient/GetTreatmentDashboardEpisodeDetails" data-updatecontainer="#dvPopupTopNodeTreatment" data-episodeid="10239" data-patientid="7621">
+
+                                  <span class="tooltipcase" title="Worker's Compensation
+Injury Type: -NA-
+Date of Accident: -NA-
+Episode Status: Active" data-content="Worker's Compensation
+Injury Type: -NA-
+Date of Accident: -NA-
+Episode Status: Active">{{item.case_detail}}</span>
+
+
+                          </td>
+                          <td style="vertical-align: middle; cursor:pointer;" class="lnkTratmentEpisode" data-req-url="/Patient/GetTreatmentDashboardEpisodeDetails" data-updatecontainer="#dvPopupTopNodeTreatment" data-episodeid="10239" data-patientid="7621">
+                              <span class="appstatus_34428">
+                                      <span class="tooltipcase" title="Visit Requested" data-content="Visit Requested">{{item.appt_status}}</span>
+                              </span>
+                          </td>                                            <td style="vertical-align: middle; cursor:pointer;" class="lnkTratmentEpisode" data-req-url="/Patient/GetTreatmentDashboardEpisodeDetails" data-updatecontainer="#dvPopupTopNodeTreatment" data-episodeid="10239" data-patientid="7621">
+{{item.dic_type}}                                            </td>
+                          <td style="vertical-align: middle;">
+                                      <span class="assessmentstatus_34428" title="N/A">
+                                        {{item.ass_status}}
+                                      </span>
+                          </td>
+                          <td style="vertical-align: middle; cursor:pointer;" class="lnkTratmentEpisode">
+
+                                  <span class="tooltipcase" title="HEMA
+54 DEAN" data-content="HEMA
+54 DEAN">{{item.pos_loc}}</span>
+                          </td>
+                          <td style="vertical-align: middle; cursor: pointer;">
+                                  <span>{{item.vid_session}}</span>
+                          </td>
+                          <td style="vertical-align: middle;">
+                              <div title="Dictation Completed" class="micupdatecontainer  dictstatus_34428">
+
+
+                                              <span class="tooltipcase" title="Dictation Completed" data-content="Dictation Completed">{{item.dic_status}}</span>
+                              </div>
+                                      <input type="checkbox" value="true" id="" data-posturl="/Transcription/UpdTrascriptionIsStatFile" data-id="9132" class="chkIsStatFileUpdate" style="zoom: 1.5;"><span>Is Stat File</span> <br>
+
+                          </td>
+                          <td style="vertical-align: middle; cursor:pointer;" class="lnkTratmentEpisode" data-req-url="/Patient/GetTreatmentDashboardEpisodeDetails" data-updatecontainer="#dvPopupTopNodeTreatment" data-episodeid="10239" data-patientid="7621">
+
+                                  <span class="tooltipcase" title="-" data-content="-">{{item.bill_status}}</span>
+                          </td>
+                          <td style="vertical-align: middle; cursor:pointer;" class="lnkTratmentEpisode" data-req-url="/Patient/GetTreatmentDashboardEpisodeDetails" data-updatecontainer="#dvPopupTopNodeTreatment" data-episodeid="10239" data-patientid="7621">
+                              <span class="tooltipcase" title="PT" data-content="PT">{{item.appt_type}}</span>
+
+                              <span class="clsIsCaseMemoAdded"></span>
+                          </td>
+                  <input type="hidden" id="hddPatientDetails_10239" value="Doe, John">
+                  <!-- <td style="vertical-align: middle;">
+
+
+
+
+                      <div class="btn-group">
+                          <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">
+                              Actions <span class="caret"></span>
+                          </button>
+
+                      </div>
+
+                  </td> -->
+                  <td style="border: 0px;">
+                    <p-dropdown
+                     id="Drop"
+                     placeholder="Actions"
+                     optionLabel="name">
+
+
+                     <ul class="dropdown-menu dropdown-menu-left" role="menu" style="left: auto; right: 0; background-color: #848484; color: #FFFFFF;">
+
+                      <li>
+<div class="dropdown-divider"></div>
+</li>
+<li><a class="lnkTratmentDiagLaborder" href="javascript:void(0);" data-req-url="/Patient/GetLatestTreatmentIdForProvDB" data-createtretrequrl="/Patient/InitiateNewEpisodeTreatment" data-createtretupdatecontiner="#dvPopupTopNode" data-episodeid="1" data-appinmentreqid="21487" data-providerid="87" data-patientid="1" data-casetypeid="1" data-provname="Ella John" data-diaglabtretrequrl="/Patient/GetOrderLabsAndDiagnosticImages" data-diaglabtretupdatecontiner="#dvPopupTopNode2"><span style="color: darkgreen;"><i class="fa fa-external-link-square" style="padding-top: 6px; font-size: 15px; margin-right: 4px;"></i></span>Order labs / Diagnostic Images</a></li>
+<li>
+<div class="dropdown-divider"></div>
+</li>
+<li><a class="lnkTratmentEpisode" href="javascript:void(0);" data-req-url="/Patient/GetTreatmentDashboardEpisodeDetails" data-updatecontainer="#dvPopupTopNodeTreatment" data-episodeid="1" data-patientid="1"><span style="color: darkgreen;"><i class="fa fa-info-circle" style="padding-top: 6px; font-size: 15px; margin-right: 4px;"></i></span>Case Details</a></li>
+<li>
+<div class="dropdown-divider"></div>
+</li>
+<li><a href="javascript:void(0)" data-episodeid="1" data-appinmentreqid="21487" data-providerid="87" data-iedit-appointment="1" data-isfromlist="yes" data-get-url="/Patient/GetEpisodeAppointmentRequestDetailsForEdit" data-casetypeid="1" data-update-container="#dvAddEpisodeApointmentRequest" id="EditAppointmentReq" title="View" class="EditAppointmentReq"><span style="color: white;"><i class="fa fa-edit" style="padding-top: 6px; font-size: 15px; margin-right: 4px;"></i></span>Edit Appointment</a>
+</li><li>
+<div class="dropdown-divider"></div>
+</li>
+<li class="hide"><a href="#">Create Assessment</a></li>
+<li>
+<div class="dropdown-divider"></div>
+</li>
+<li>
+<a id="lnkProviderDasbhoarBoardSearchResultCaseNotes" data-get-url="/Patient/GetAllProcedureAggregatedComments" data-episodesurgerydetailsid="" data-update-container="#dvPreSurgerySearchResultCaseNotes" data-update-containerbody="#dvEpisodeTeamRoleActivityStatusCommentsList" data-appointmentid="21487" data-episodeid="1" data-patientid="1"><i class="fa fa-file" title="Click For Case Notes"></i>&nbsp;&nbsp;Case Notes</a>
+</li>
+<li>
+<div class="dropdown-divider"></div>
+</li>
+<li>
+<a href="javascript:void(0);" data-req-url="/Patient/AddNewAppointmentCaseMemo" data-update-container="#dvPopupTopNode1" id="btnAddnewCaseMemo" data-appointmentid="21487" data-episodeid="1" data-patientid="1"><i class="fa fa-file" title="Click For Appointment Memos"></i>&nbsp;&nbsp;Appointment Memos</a>
+</li>
+
+
+
+<li>
+<div class="dropdown-divider"></div>
+</li>
+<li>
+<a class="btnAddCaseManagementMemo" href="javascript:void(0);" data-req-url="/Patient/AddCaseManagementMemo" data-updatecontainer="#dvAddCaseManagementMemo" data-appointmentid="21487" data-episodeid="1" data-patientid="1"><i class="fa fa-file" title="Click For CaseManagment Memo"></i>&nbsp;Add CaseManagment Memo</a>
+</li>
+<li>
+<div class="dropdown-divider"></div>
+</li>
+<li>
+
+<a href="javascript:void(0)" class="assignreqtoglobalvar supdocumentdetials" data-geturl="/Patient/GetSuperBillDocumentDetails" data-urlsrc="https://qa.yourdrs.com:443/Patient/GetSuperBillDocumentDetails?AppointmentRequestId=" data-apptid="21487" data-dicomupdatecontainer="#dvDicomDetails" data-updatecontainer="#dvDocumentDetails"><span style="color: darkgreen;"><i class="fa fa-file pull-left" style="padding-top: 6px;" title="View Super Bill Document"></i></span>View Super Bill Document </a>
+</li>
+                      <li><a href="javascript:void(0)" class="btnAddVerification hide" data-patientid="1" data-update-container="#dvPopUpVerification" data-req-url="/Patient/GetPracticeManagementVerifier" data-id="" data-episodeid="1" data-appointmentid="21487" style="line-height:20px;padding:5px;margin:0px; padding-left: 15px;"><span style="color: red;"></span><i class="fa fa-plus" style="padding-top: 6px; font-size: 15px;"></i>Add Verification Notes</a></li>
+<li><a href="javascript:void(0)" class="btnCaseManagement hide" data-patientid="1" data-update-container="#dvCaseManagement" data-req-url="/Patient/GetPracticeManagementVerifier" data-id="" data-episodeid="1" data-appointmentid="21487" style="line-height:20px;padding:5px;margin:0px; padding-left: 15px;"><span style="color: red;"></span><i class="fa fa-plus" style="padding-top: 6px; font-size: 15px;"></i>&nbsp;&nbsp;Case Management</a></li>
+<li><a href="javascript:void(0)" class="btnCaseMgntVerification hide" data-patientid="1" data-update-container="#dvCaseMgntVerification" data-req-url="/Patient/GetPracticeManagementVerifier" data-id="" data-episodeid="1" data-appointmentid="21487" style="line-height:20px;padding:5px;margin:0px; padding-left: 15px;"><span style="color: red;"></span><i class="fa fa-plus" style="padding-top: 6px; font-size: 15px;"></i>&nbsp;&nbsp;Verification</a></li>
+<li><a href="javascript:void(0)" class="btnAddVerificationStatus hide" data-patientid="1" data-update-container="#dvPopUpVerificationMainModelStatus" data-req-url="/Patient/GetAppointmentVerificationStatus" data-appointmentid="21487" style="line-height:20px;padding:5px;margin:0px; padding-left: 15px;"><span style="color: red;"></span><i class="fa fa-plus" style="padding-top: 6px; font-size: 15px;"></i>Add Verification Status</a></li>
+<li><a href="javascript:void(0)" onclick="viewSuperBill('1', '21487', '1')" style="line-height:20px;padding:5px;margin:0px; padding-left: 15px;"><span style="color: red;"></span><i class="fa fa-download" style="padding-top: 6px; font-size: 15px;"></i>Download Super Bill</a></li>
+<li><a class="addappointmentmop" data-appointmentid="21487" data-get-url="/Billing/GetAppointmentMOP" data-updatecontainer="#dvPopupTopNode4"><i class="fa fa-plus" style="padding-top: 6px;" title="Add MOP"></i>&nbsp;&nbsp;<b>Add MOP</b></a></li>
+</ul>
+
+
+
+
+                    </p-dropdown>
+                           </td>
+          </tr>
+          <tr class="hide trdet trdetails_34428" style="background-color:#fff !important">
+              <td colspan="21">
+                  <div id="dvPatientCaseDetails_34428">
+                  </div>
+              </td>
+          </tr>
+  </tbody>
+
+</table>
+
+
+<!-- <table class="table table-striped table-condensed tablesorter text-sm">
+  <thead style="background-color: #337ab7; color: white">
+  <tr>
+  <th>Appointment From Date</th>
+  <th>Authorization Status</th>
+  <th>Case #</th>
+  <th>MOP</th>
+  <th>Super Bill Status</th>
+  <th>Checked In Time</th>
+  <th>Patient Name</th>
+  <th>Appointment Created Date</th>
+  <th>Provider</th>
+  <th>Verification Status</th>
+  <th>Location</th>
+  <th>Case Details</th>
+  <th>Appointment Status</th>
+  <th>Dictation Type</th>
+  <th>Assessment Status</th>
+  <th>POS Location</th>
+  <th>Video Session</th>
+  <th>Dictation Status</th>
+  <th>Billing Status</th>
+  <th>Appointment Type</th>
+  <th>Action</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let item of your" data-appid="34428" >
+  <td>{{item.appt_date}}</td>
+  <td>{{item.auth_status}}</td>
+  <td>{{item.case}}</td>
+  <td>{{item.mop}}</td>
+  <td>{{item.sup_bilstatus}}</td>
+  <td>{{item.check_in_time}}</td>
+  <td>{{item.pat_name}}</td>
+  <td>{{item.appt_cre_date}}</td>
+  <td>{{item.provider}}</td>
+  <td>{{item.ver_status}}</td>
+  <td>{{item.location}}</td>
+  <td>{{item.case_detail}}</td>
+  <td>{{item.appt_status}}</td>
+  <td>{{item.dic_type}}</td>
+  <td>{{item.ass_status}}</td>
+  <td>{{item.pos_loc}}</td>
+  <td>{{item.vid_session}}</td>
+  <td>{{item.dic_status}}</td>
+  <td>{{item.bill_status}}</td>
+  <td>{{item.appt_type}}</td>
+  <td style="vertical-align: middle;">
+    <div class="btn-group">
+        <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">
+            Actions <span class="caret"></span>
+        </button>
+    </div>
+</td>
+  </tr>
+  </tbody>
+  </table> -->
+
+
+
+

@@ -1,0 +1,328 @@
+<p-dialog id="editFIlter" header="Title" [(visible)]="saveEditFilter" style="width: 600px;">
+  <!-- <h1>SaveEditFilter</h1> -->
+  <!-- <div class="modal-dialog">
+    <div class="modal-content animated bounceInRight"> -->
+
+        <div class="modal-header">
+            <a href="javascript:void(0)" data-dismiss="modal" class="btn btn-small btn-danger pull-right"(click)="closeSaveEditFilter()">Close</a>
+            <h3>Favourite Filter</h3>
+        </div>
+
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <span>
+                        <label>Filter Name <span style="color:red;">*</span></label>
+                        <input type="text" class="form-control" value="" id="txtDashboardFilterName" maxlength="500">
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0)" id="btnSaveDashboardFilters" data-req-url="/Admin/InsUpdMemberDashboardFilters" data-get-url="/Admin/GetMemberDashboardFilters" data-updatecoontainer="#ddlMemberDashboardFilter" class="btn btn-success pull-right" style="margin-left:10px"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;&nbsp;Save Filter</a>
+        </div>
+    <!-- </div>
+</div> -->
+</p-dialog>
+
+<p-dialog id="displayColum" header="Title" [(visible)]="editDisplayColumns" style="width: 600px;">
+<div class="modal-header">
+  <a href="javascript:void(0)" data-dismiss="modal" class="btn btn-small btn-danger pull-right" (click)="closeDisplayColum()">Close</a>
+  <div class="row" >
+    <div class="col-lg-12">
+  <h3>Provider Dashboard Display Fields</h3>
+  <h4 style="color: red">Drag, Drop &amp; Sort your desired filters</h4>
+</div>
+  </div>
+</div>
+
+<ng-template #itemTemplate let-item="item" let-index="index"><span>{{index}}: {{item.value}}</span></ng-template>
+
+<div class="row" >
+  <div class="col-lg-6">
+      <div class="ibox ">
+          <div class="ibox-title">
+              <h5>Available Display Fields</h5>
+          </div>
+          <div class="ibox-content">
+              <ul class="sortable-list connectList agile-list ui-sortable" id="unselectedlist" style="padding-left: 0px;list-style-type: none;">
+                <bs-sortable
+                class="info-element"
+                [(ngModel)]="itemStringsLeft"
+                [itemTemplate]="itemTemplate"
+                itemClass="sortable-item"
+                itemActiveClass="sortable-item-active"
+                placeholderItem="Drag here"
+                placeholderClass="placeholderStyle"
+                wrapperClass="sortable-wrapper"
+              ></bs-sortable>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+  <div class="col-lg-6">
+    <div class="ibox ">
+        <div class="ibox-title">
+            <h5>Selected Filters</h5>
+        </div>
+        <div class="ibox-content">
+            <ul  class="sortable-list connectList agile-list ui-sortable" id="selectedlist" style="padding-left: 0px;list-style-type: none;">
+              <bs-sortable
+              class="info-element"
+              [(ngModel)]="itemStringsRight"
+              itemClass="sortable-item"
+              itemActiveClass="sortable-item-active"
+              placeholderItem="Drag here"
+              placeholderClass="placeholderStyle"
+              wrapperClass="sortable-wrapper"
+            ></bs-sortable>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+
+  <!-- <div class="row" >
+    <div class="col-lg-6">
+        <div class="ibox ">
+            <div class="ibox-title">
+                <h5>Available Display Fields</h5>
+            </div>
+            <div class="ibox-content">
+                <ul class="sortable-list connectList agile-list ui-sortable" id="unselectedlist">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="ibox ">
+          <div class="ibox-title">
+              <h5>Selected Filters</h5>
+          </div>
+          <div class="ibox-content">
+              <ul *ngFor="let item of displaycolumns" class="sortable-list connectList agile-list ui-sortable" id="selectedlist" style="padding-left: 0px;list-style-type: none;">
+                      <li class="info-element" id="2" data-value="2" style="">
+                        {{item.location}}
+                      </li>
+                      <li class="info-element" id="3" data-value="3">
+                        {{item.provider}}
+                      </li>
+                      <li class="info-element" id="4" data-value="4">
+                        {{item.patient_name}}
+                      </li>
+                      <li class="info-element" id="6" data-value="6">
+                        {{item.case}}
+                      </li>
+                      <li class="info-element" id="7" data-value="7">
+                        {{item.appointment_from_date}}
+                      </li>
+                      <li class="info-element" id="17" data-value="17">
+                        {{item.authorization_status}}
+                      </li>
+                      <li class="info-element" id="24" data-value="24">
+                        {{item.mop}}
+                      </li>
+                      <li class="info-element" id="23" data-value="23">
+                        {{item.super_bill_status}}
+                      </li>
+                      <li class="info-element" id="22" data-value="22">
+                        {{item.checked_in_time}}
+                      </li>
+                      <li class="info-element" id="19" data-value="19">
+                        {{item.appointment_created_from_date}}
+                      </li>
+                      <li class="info-element" id="18" data-value="18">
+                        {{item.verification_status}}
+                      </li>
+                      <li class="info-element" id="14" data-value="14">
+                        {{item.case_details}}
+                      </li>
+                      <li class="info-element" id="10" data-value="10">
+                        {{item.appointment_status}}
+                      </li>
+                      <li class="info-element" id="25" data-value="25">
+                        {{item.dictation_type}}
+                      </li>
+                      <li class="info-element" id="12" data-value="12">
+                        {{item.assessment_status}}
+                      </li>
+                      <li class="info-element" id="28" data-value="28">
+                        {{item.pos_location}}
+                      </li>
+                      <li class="info-element" id="21" data-value="21">
+                        {{item.video_session}}
+                      </li>
+                      <li class="info-element" id="11" data-value="11">
+                        {{item.dictation_status}}
+                      </li>
+                      <li class="info-element" id="13" data-value="13">
+                        {{item.billing_status}}
+                      </li>
+                      <li class="info-element" id="9" data-value="9">
+                        {{item.appointment_type}}
+                      </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  </div> -->
+  <!-- <ng-template #itemTemplate let-item="item" let-index="index"><span>{{index}}: {{item.value}}</span></ng-template>
+
+<div class="row">
+  <div class="col-xs-6 col-6 col-md-5 col-lg-3">
+    <bs-sortable
+      [(ngModel)]="itemStringsLeft"
+      [itemTemplate]="itemTemplate"
+      itemClass="sortable-item"
+      itemActiveClass="sortable-item-active"
+      placeholderItem="Drag here"
+      placeholderClass="placeholderStyle"
+      wrapperClass="sortable-wrapper"
+    ></bs-sortable>
+    <pre class="code-preview">model: {{ itemStringsLeft | json }}</pre>
+  </div>
+  <div class="col-xs-6 col-6 col-md-5 col-lg-3">
+    <bs-sortable
+      [(ngModel)]="itemStringsRight"
+      itemClass="sortable-item"
+      itemActiveClass="sortable-item-active"
+      placeholderItem="Drag here"
+      placeholderClass="placeholderStyle"
+      wrapperClass="sortable-wrapper"
+    ></bs-sortable>
+    <pre class="code-preview">model: {{ itemStringsRight | json }}</pre>
+  </div>
+</div> -->
+  </p-dialog>
+
+
+<p-dialog id="filterFields" header="Title" [(visible)]="editFilterFields" style="width: 600px;">
+  <!-- <h1>EditFilterFields</h1> -->
+
+  <!-- <div class="modal-content animated bounceInRight"> -->
+
+    <div class="modal-header">
+      <a href="javascript:void(0)" data-dismiss="modal" class="btn btn-small btn-danger pull-right" (click)="closeEditFilterFields()">Close</a>
+      <div class="row" >
+      <div class="col-lg-12">
+        <h3>Provider Dashboard Filter Fields</h3>
+        <h4 style="color: red">Drag, Drop &amp; Sort your desired filters</h4>
+    </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>Available Filter Fields</h5>
+                </div>
+                <div class="ibox-content">
+                    <ul class="sortable-list connectList agile-list ui-sortable" id="unselectedfilterlist">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>Selected Filter Fields</h5>
+                </div>
+                <div class="ibox-content">
+                    <ul *ngFor="let item of fielterfields" class="sortable-list connectList agile-list ui-sortable" id="selectedfilterlist" style="padding-left: 0px;list-style-type: none;">
+                            <li class="info-element" id="1" data-value="1">
+                              {{item.practice}}
+                            </li>
+                            <li class="info-element" id="2" data-value="2">
+                              {{item.location}}
+                            </li>
+                            <li class="info-element" id="3" data-value="3">
+                              {{item.provider}}
+                            </li>
+                            <li class="info-element" id="28" data-value="28">
+                              {{item.pos_location}}
+                            </li>
+                            <li class="info-element" id="27" data-value="27">
+                              {{item.pos_practice}}                            </li>
+                            <li class="info-element" id="6" data-value="6">
+                              {{item.case}}
+                            </li>
+                            <li class="info-element" id="5" data-value="5">
+                              {{item.Account}}
+                            </li>
+                            <li class="info-element" id="4" data-value="4">
+                              {{item.patient_name}}
+                            </li>
+                            <li class="info-element" id="11" data-value="11">
+                              {{item.dictation_status}}
+                            </li>
+                            <li class="info-element" id="23" data-value="23">
+                              {{item.super_bill_status}}
+                            </li>
+                            <li class="info-element" id="13" data-value="13">
+                              {{item.billing_status}}
+                            </li>
+                            <li class="info-element" id="25" data-value="25">
+                              {{item.dictation_type}}
+                            </li>
+                            <li class="info-element" id="15" data-value="15">
+                              {{item.case_type}}
+                            </li>
+                            <li class="info-element" id="12" data-value="12">
+                              {{item.assessment_status}}
+                            </li>
+                            <li class="info-element" id="20" data-value="20">
+                              {{item.appointment_created_to_date}}
+                            </li>
+                            <li class="info-element" id="10" data-value="10">
+                              {{item.appointment_status}}
+                            </li>
+                            <li class="info-element" id="16" data-value="16">
+                              {{item.episode_status}}
+                            </li>
+                            <li class="info-element" id="17" data-value="17">
+                              {{item.authorization_status}}
+                            </li>
+                            <li class="info-element" id="19" data-value="19">
+                              {{item.appointment_created_from_date}}
+                            </li>
+                            <li class="info-element" id="18" data-value="18">
+                              {{item.verification_status}}
+                            </li>
+                            <li class="info-element" id="9" data-value="9">
+                              {{item.appointment_type}}
+                            </li>
+                            <li class="info-element" id="8" data-value="8">
+                              {{item.appointment_to_date}}
+                            </li>
+                            <li class="info-element" id="7" data-value="7">
+                              {{item.appointment_from_date}}
+                            </li>
+                            <li class="info-element" id="26" data-value="26">
+                              {{item.isstatfile}}
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="modal-footer">
+        <a href="javascript:void(0)" data-dismiss="modal" class="btn btn btn-small btn-danger">Cancel</a>
+        <a href="javascript:void(0)" class="btn btn-success" data-update-container="#dvProviderDashboadFilterFields" id="btnUpdateProviderSelectedFiltersFields" data-post-url="/Patient/UpdateProviderDashboardSelectedFiltersFields" data-get-url="/Patient/GetSelectedProviderDashboardFilterFields">Save</a>
+    </div> -->
+<!-- </div> -->
+</p-dialog>
+
+
+
+<div class="col-xs-8 pull-right" style="margin-top: 5px; margin-bottom: 10px; margin-right: 5px;">
+
+  <a href=" " style="margin-left: 10px;" class="btn btn-primary pull-right" (click)="printPage()">Print</a>
+  <a href=" " style="margin-left: 10px;" class="btn btn-primary pull-right">Search</a>
+  <a href="javascript:void(0)" style="margin-left: 10px;" class="btn btn-primary pull-right" (click)="editfilterfields()">Edit Filter Fields</a>
+  <a href="javascript:void(0)" style="margin-left: 10px;" class="btn btn-primary pull-right" (click)="editdisplaycolumns()">Edit Display Columns</a>
+  <a href="javascript:void(0)" style="margin-left: 10px;" class="btn btn-primary pull-right" (click)="saveeditfilter()">Save/Edit Filter</a>
+  <a href=" " style="margin-left: 10px;" class="btn btn-primary pull-right">Clear Filter Fields</a>
+
+   </div>
